@@ -34,8 +34,10 @@ def category_posts(request, category_slug):
             is_published=True)
     )
 
-    post_list = get_list_or_404(get_available_posts()
-                                .filter(category=category))
+    post_list = get_list_or_404(
+        get_available_posts()
+        .filter(category=category)
+    )
 
     context = {
         "post_list": post_list,

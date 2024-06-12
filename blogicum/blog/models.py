@@ -71,6 +71,7 @@ class Post(PostModel):
     )
     location = models.ForeignKey(
         to=Location,
+        blank=True,
         null=True,
         on_delete=models.SET_NULL,
         verbose_name="Местоположение",
